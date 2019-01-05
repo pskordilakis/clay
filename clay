@@ -1,8 +1,11 @@
 #! /usr/bin/env bash
 
-source "./cli/up.sh"
-source "./cli/run.sh"
-source "./cli/down.sh"
+declare CLAY_HOME
+CLAY_HOME="$( cd "$( dirname "$0" )" >/dev/null && pwd )"
+
+source "$CLAY_HOME/cli/up.sh"
+source "$CLAY_HOME/cli/run.sh"
+source "$CLAY_HOME/cli/down.sh"
 
 declare -A commands
 commands=(

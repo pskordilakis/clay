@@ -9,5 +9,6 @@ const knex = require('knex')({
 })
 
 // read file migrations.js
-import { migrations } from '../migrations'
+import { migrations } from '../app/migrations'
+
 migrations(knex)
