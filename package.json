@@ -17,9 +17,6 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "test": "jest --notify",
-    "test-watch": "jest --watch --notify",
-    "lint": "eslint . --ext=js"
+    "dev": "rollup -c -w"
   }
 }

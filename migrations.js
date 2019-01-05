@@ -1,3 +1,3 @@
 export function migrations(knex) {
-  console.log('asdsd')
+  // migrations entry point
 }
