@@ -1,0 +1,19 @@
+#! /usr/bin/env bash
+
+source "./cli/up.sh"
+source "./cli/run.sh"
+source "./cli/down.sh"
+
+declare -A commands
+commands=(
+    [up]=up
+    [run]=run
+    [down]=down
+)
+
+# get command to execute
+command=$1
+shift
+
+# Run desired command and pass any given parameters
+${commands[$command]} "$@"

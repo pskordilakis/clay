@@ -1,0 +1,30 @@
+version: '3'
+services:
+  node:
+    image: node:alpine
+    user: node
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+
+  mysql:
+    image: mysql:5.7
+    command: --disable-partition-engine-check
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: topsecret
+      MYSQL_DATABASE: clay
+      MYSQL_USER: prime
+      MYSQL_PASSWORD: secret
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
