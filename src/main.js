@@ -12,3 +12,5 @@ const knex = require('knex')({
 import { migrations } from '../app/migrations'
 
 migrations(knex)
+  .then(() => process.exit(0))
+
