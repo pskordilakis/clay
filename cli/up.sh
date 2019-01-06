@@ -7,5 +7,5 @@ function up {
     docker-compose up -d
 
     # Install deps
-    docker-compose run node yarn install
+    docker-compose run --rm node yarn install
 }
