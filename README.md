@@ -1,6 +1,8 @@
 # Clay
 
-CLI tool to transform databases. Update/Transform database to new schema using migration files.
+CLI portable tool to transform database dumps. Alter database to new schema, filter data using Query/Schema Builder.
+
+Clay transforms your data in zero time without dependencies.
 
 ## Workflow
 
