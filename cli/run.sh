@@ -7,6 +7,8 @@ function run {
     docker-compose run --rm node yarn build
 
     # Import database
+    docker-compose exec -T mysql mysql -uroot -ptopsecret -e 'DROP DATABASE clay'
+    docker-compose exec -T mysql mysql -uroot -ptopsecret -e 'CREATE DATABASE clay'
     docker-compose exec -T mysql mysql -uroot -ptopsecret clay < "$CLAY_HOME/app/db/$1"
 
     # Run
